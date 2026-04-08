@@ -1,0 +1,5 @@
+* @ScutumDefense/platform-security
+/src/engine/ @ScutumDefense/platform-security @ScutumDefense/architecture-council
+/policies/operational/ @ScutumDefense/product-leads
+/policies/safety/ @ScutumDefense/ot-safety
+/policies/sovereignty/ @ScutumDefense/crypto-assurance @ScutumDefense/platform-security

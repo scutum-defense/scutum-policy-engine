@@ -1,0 +1,18 @@
+{
+  "id": "SCUTUM-SOV-001",
+  "name": "Sovereign data residency enforcement",
+  "description": "Ensures all operational data processing and storage occurs within sovereign deployment boundaries. Blocks any action that would transfer data outside the designated sovereign region.",
+  "version": "1.0.0",
+  "category": "sovereignty",
+  "enabled": true,
+  "rules": [
+    { "field": "target_region", "operator": "not_in", "value": ["sovereign-primary", "sovereign-secondary"] }
+  ],
+  "verdict": "deny",
+  "message": "Data must remain within sovereign boundaries. Cross-region transfer denied.",
+  "metadata": {
+    "author": "crypto-assurance",
+    "created": "2026-04-01",
+    "tags": ["sovereignty", "data-residency", "compliance"]
+  }
+}

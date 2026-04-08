@@ -1,0 +1,20 @@
+{
+  "id": "SCUTUM-SAFETY-001",
+  "name": "No autonomous OT write path",
+  "description": "Prevents any automated system from executing OT/SCADA write operations without explicit human approval. This is a non-negotiable safety constraint.",
+  "version": "1.0.0",
+  "category": "safety",
+  "enabled": true,
+  "rules": [
+    { "field": "action_type", "operator": "eq", "value": "ot_write" },
+    { "field": "approval_status", "operator": "neq", "value": "approved" }
+  ],
+  "verdict": "deny",
+  "message": "OT write operations require explicit human approval. No autonomous OT writes are permitted.",
+  "metadata": {
+    "author": "ot-safety",
+    "created": "2026-04-01",
+    "references": ["IEC-62443", "NIST-SP-800-82"],
+    "tags": ["ot", "safety", "critical", "non-negotiable"]
+  }
+}

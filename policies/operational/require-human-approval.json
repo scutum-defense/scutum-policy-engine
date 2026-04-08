@@ -1,0 +1,19 @@
+{
+  "id": "SCUTUM-OPS-001",
+  "name": "Human approval required for action execution",
+  "description": "All recommended actions must receive explicit human operator approval before transitioning to execution state.",
+  "version": "1.0.0",
+  "category": "operational",
+  "enabled": true,
+  "rules": [
+    { "field": "action_type", "operator": "in", "value": ["execute", "deploy", "escalate"] },
+    { "field": "approval_status", "operator": "neq", "value": "approved" }
+  ],
+  "verdict": "require_approval",
+  "message": "This action requires human operator approval before execution.",
+  "metadata": {
+    "author": "product-leads",
+    "created": "2026-04-01",
+    "tags": ["human-in-the-loop", "approval", "operational"]
+  }
+}

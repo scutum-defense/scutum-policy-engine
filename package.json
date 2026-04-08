@@ -1,0 +1,19 @@
+{
+  "name": "@scutum/policy-engine",
+  "version": "0.1.0",
+  "description": "Policy-as-code evaluation engine for sovereign defense operations",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0",
+    "tsx": "^4.19.0"
+  }
+}
